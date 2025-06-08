@@ -7,7 +7,7 @@ import tkinter.scrolledtext as st
 from datetime import *
 
 def connection():
-    connectObj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connectObj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur = connectObj.cursor()
     sql = '''
     create table if not exists sellings (
@@ -40,7 +40,7 @@ def billing():
 
 
 def print_bill():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute("insert into orders(total,ID) values(%s,'%s')"%(total(),id_of_user))
     connection_Obj.commit()
@@ -72,7 +72,7 @@ def delete_1():
         clear()
 
 def data_display():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from sellings')
     result=cur.fetchall()
@@ -137,7 +137,7 @@ def get_values_1(ev):
     data_display()
     
 def data_display_1():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from sellings')
     result=cur.fetchall()
@@ -152,7 +152,7 @@ def data_display_1():
     connection_Obj.close()
 
 def delete():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     row_value=item_table_1.focus()
     value=item_table_1.item(row_value)
@@ -168,7 +168,7 @@ def delete():
     clear_1()
     
 def update():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from sellings')
     result=cur.fetchall()
@@ -194,7 +194,7 @@ def clear_1():
     data_display()
     
 def add():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from sellings')
     result=cur.fetchall()
@@ -209,7 +209,7 @@ def add():
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def data_display_2():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from employees')
     result=cur.fetchall()
@@ -246,7 +246,7 @@ def clear_2():
     data_display()
     
 def update_2():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from employees')
     result=cur.fetchall()
@@ -263,7 +263,7 @@ def update_2():
     clear_2()
     
 def delete_2():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     row_value=item_table_2.focus()
     value=item_table_2.item(row_value)
@@ -278,7 +278,7 @@ def delete_2():
     clear_2()
     
 def ID_generate():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from employees')
     result=cur.fetchall()
@@ -302,7 +302,7 @@ def ID_generate():
         ID_generate()
 
 def add_1():
-    connection_Obj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+    connection_Obj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
     cur=connection_Obj.cursor()
     cur.execute('select * from employees')
     result=cur.fetchall()
@@ -844,7 +844,7 @@ def destroy():
 
 def login_page():
     def user_check():
-        connectObj=db.connect(host='localhost',user='root',password='root123',database="shopmanagement",auth_plugin='mysql_native_password')
+        connectObj=db.connect(host='localhost',user='root',password='Wewillwin@2026',database="shopmanagement",auth_plugin='caching_sha2_password')
         cur=connectObj.cursor()
         cur.execute('select * from user')
         global id_of_user
